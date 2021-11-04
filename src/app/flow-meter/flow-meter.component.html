@@ -1,0 +1,31 @@
+<div class="flow-meter">
+    <div class="flow-meter__instruction">
+        <h3>Instrukcja</h3>
+        <p>Wypełnij dane i kliknij przycisk <span>dodaj punkt</span>. Następnie wybierz punkt na mapie i kliknij <span>zatwierdź</span></p>    
+    </div>
+    <div class="flow-meter__form">
+        <h3>Dodaj nowy przepływiomierz</h3>
+        <div *ngIf="isSubmited && flowForm.invalid" class="error-message">Wypełnij formularz</div>
+        <form [formGroup]="flowForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+                <label for="name">Nazwa</label>
+                <input type="text" id="name" name="name" formControlName="name">
+            </div>
+            <div class="form-row">
+                <label for="type">Typ</label>
+                <select id="type" name="type" formControlName="type">
+                    <option *ngFor="let type of flowTypes" [value]="type.value">{{ type.label }}</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="average-flow">Średnia wartość przepływu [m3/dzień]</label>
+                <input type="number" id="average-flow" name="average-flow" formControlName="average_flow">
+            </div>
+            <div class="btn-row">
+                <button type="button" class="btn">Wyczyść</button>
+                <button class="btn btn--filled">Zatwierdź</button>
+            </div>
+        </form>
+    </div>
+    <app-toggle-button>add_to_photos</app-toggle-button>
+</div>

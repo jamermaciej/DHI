@@ -1,0 +1,17 @@
+<div class="map-container" [class.sidebar-open]="isSidebarOpen | async">
+    <div class="map"
+        leaflet 
+        (leafletClick)="isMarkerEnable && addMarker($event);"
+        [leafletLayers]="markers"
+        [leafletOptions]="options">
+    </div>
+    
+    <app-widget-map class="widget-areas">
+        <app-widget-areas class="app-widget"></app-widget-areas>
+        <ng-container>Legenda stref</ng-container>
+    </app-widget-map>
+    <app-widget-map class="widget-flow">
+        <app-widget-flow class="app-widget"></app-widget-flow>
+        <ng-container>Legenda przepływu</ng-container>
+    </app-widget-map>
+</div>

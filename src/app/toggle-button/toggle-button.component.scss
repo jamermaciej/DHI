@@ -1,0 +1,19 @@
+@import "../../scss/variables";
+
+button {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 60%;
+    left: -60px;
+    z-index: 400;
+    background-color: $colorGreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    i {
+        font-size: 40px;
+        color: $colorWhite;
+    }
+}

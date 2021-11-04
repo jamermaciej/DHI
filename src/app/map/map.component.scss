@@ -1,0 +1,40 @@
+.map-container {
+    position: relative;
+    transition: margin .3s;
+    will-change: margin;
+    
+    &.sidebar-open {
+        margin-right: 250px;
+    }
+
+    .map {
+        height: calc(100vh - 52px);
+    }
+
+    .widget-areas,
+    .widget-flow {
+        position: absolute;
+        z-index: 400;
+        top: 30px;
+    }
+
+    .widget-areas {
+        right: 350px;
+        width: 150px;
+
+        @media (max-width: 768px) {
+            right: 235px;
+        }
+    }
+
+    .widget-flow {
+        right: 100px;
+        width: 225px;
+
+        @media (max-width: 768px) {
+            right: 15px;
+            width: 200px;
+        }
+    }
+}
+  

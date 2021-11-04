@@ -1,0 +1,11 @@
+<div class="map-widget" [class.open]="showContent">
+    <ng-container *ngIf="showContent">
+        <ng-content select=".app-widget"></ng-content>
+    </ng-container>
+    <div class="map-widget__footer">
+        <button (click)="toggle()">
+            <ng-content select="ng-container"></ng-content>
+            <i class="mat-icon">keyboard_arrow_down</i>
+        </button>
+    </div>
+</div>

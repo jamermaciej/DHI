@@ -1,0 +1,53 @@
+@import "../../scss/variables";
+
+.flow-meter {
+    background-color: $colorWhite;
+
+    h3 {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    &__instruction {
+        padding: 15px;
+    
+        p {
+            font-size: 14px;
+            line-height: 18px;
+    
+            span {
+                color: $colorBlue;
+            }
+        }
+    }
+
+    &__form {
+        padding: 15px;
+        border-top: 1px solid $colorGrayLight;
+        border-bottom: 1px solid $colorGrayLight;
+
+        .form-row {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+
+            label {
+                font-size: 12px;
+                color: $colorGray;
+            }
+
+            input {
+                border-bottom: 1px solid $colorGray;
+                font-size: 16px;
+                line-height: 26px;
+                padding: 5px 0;
+            }
+
+            select {
+                border-bottom: 1px solid $colorGray;
+                height: 36px;
+            }
+        }
+    }
+}
